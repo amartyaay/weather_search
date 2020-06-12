@@ -6,29 +6,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </head>
 <body>
-    <h1 class="text-center jumbotron jumbotron-fluid">WeatherSearch</h1>
+    <h1 class="text-center jumbotron jumbotron-fluid">Weather Search</h1>
     
         <div class="option">
 
-            <input type="radio" name="option" id="opt-current"><span class="int_msg">Current Location</span>
-            <input type="radio" name="option" id="opt-search"><span class="int_msg">Search</span>
+            <input type="radio" name="option" id="opt-current">
+            <label for="opt-current">
+                <span class="int_msg">Current Location</span>
+            </label>
+
+            <input type="radio" name="option" id="opt-search">
+            <label for="opt-search">
+                <span class="int_msg">Search</span>
+            </label>
         </div>
         <div class="city invisible">
-            <input type="text" name="city" id="city" required><span class="city_search form-control"></span>
-            <span class="msg alert alert-success invisible" role="alert">Invalid Input</span>
+            <input type="text" name="city" id="city" required autocomplete="off"><span class="city_search form-control"></span>
+           <label for="city">
+               <span class="msg alert alert-success invisible" role="alert">Invalid Input</span>
+            </label>
             <button type="button" class="city_search btn btn-primary">Submit</button>
         </div>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="download.jpeg" alt="Card image cap">
+            <span class="icon"><img class="card-img-top" src="download.jpeg" alt="Card image cap"></span>
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title">Hey There!!</h5>
+              <h6 class="city-name"></h6>
+              <p class="classtext">
+                  Temperature : <span class="temp"><b>Please</b></span><br>
+                  Feels Like  : <span class="feel"><b>Choose</b></span><br>
+                  Humidity : <span class="humid"><b>a</b></span><br>
+                  Wind Speed : <span class="wind"><b><i>OPTION</i></b></span><br>
+              </p>
+              <!-- <a href="#" class="btn btn-primary"></a> -->
             </div>
           </div>
-    
+          <div class="LI-profile-badge badge-link"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="amartya-ayushi-0b8a10198"><a class="LI-simple-link" href='https://in.linkedin.com/in/amartya-ayushi-0b8a10198?trk=profile-badge'>Amartya Ayushi</a></div>
+
     <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

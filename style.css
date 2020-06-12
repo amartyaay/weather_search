@@ -12,3 +12,15 @@
     margin-right: 50px;
     margin-left: 9px;
 }
+input{
+    margin-left: 10px;
+}
+.icon{
+    background-position: fit;
+    background-size: cover;
+    /* background-color: black; */
+}
+.badge-link{
+    margin: 30px auto;
+    text-align: center;
+}

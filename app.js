@@ -60,10 +60,35 @@ function api_fetch(lattCity,long){
             return res.json();
         })
         .then(data =>{
+
+            // const { main, name, sys, weather } = data;
+            // const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${
+            //   weather[0]["icon"]
+            // }.svg`;
+
             console.log(data);
             console.log(data["weather"][0]["description"]);
             const title = document.querySelector(".card-title");
+            const cityName=document.querySelector(".city-name");
+            const temp = document.querySelector(".temp");
+            const feel = document.querySelector(".feel");
+            const humid = document.querySelector(".humid");
+            const wind = document.querySelector(".wind");
+            const icon = document.querySelector(".icon");
+
+
             title.textContent = data["weather"][0]["description"].toUpperCase();
+            cityName.textContent=data["name"];
+            temp.innerHTML=k2c(data["main"]["temp"]);
+            feel.innerHTML=k2c(data["main"]["feels_like"]);
+            humid.innerHTML=` ${(data['main']['humidity'])} %`;
+            wind.innerHTML=` ${data['wind']['speed']} kmph`;
+            icon.innerHTML=`<img class="card-img-top" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${data["weather"][0]["icon"]}.svg" alt="Card image cap">`;
         });
+};
+
+function k2c(t){
+    c=Math.floor(t-273);
+    return ` ${c} &#x2103;`;
 };
 
