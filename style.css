@@ -29,8 +29,11 @@ input{
 .option{
     text-align: center;
 }
-.icon{
-    /* box-sizing: content-box; */
-    /* background-image: url("download.jpeg");
-    background-size: contain; */
+
+a{
+    color: black;
+}
+a:hover{
+    color: white;
+    font-size: larger;
 }
