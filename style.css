@@ -1,12 +1,13 @@
+body, .jumbotron{
+    background: rgb(251,251,255);
+    background: linear-gradient(90deg, rgba(251,251,255,1) 0%, rgba(32,86,227,1) 51%);
+}
 .msg{
     font-size: 12px;
     display: block-inline;
     margin-bottom: 20px;
     margin-right:20px;
     display: none;
-}
-.opt{
-    margin: auto;
 }
 .int_msg{
     margin-right: 50px;
@@ -15,12 +16,21 @@
 input{
     margin-left: 10px;
 }
-.icon{
-    background-position: fit;
-    background-size: cover;
-    /* background-color: black; */
-}
 .badge-link{
     margin: 30px auto;
     text-align: center;
+}
+.card{
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 55px;
+}
+.option{
+    text-align: center;
+}
+.icon{
+    /* box-sizing: content-box; */
+    /* background-image: url("download.jpeg");
+    background-size: contain; */
 }
